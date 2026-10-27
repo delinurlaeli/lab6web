@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 6: DOM & Event Handling - Deli Nurlaeli</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Identitas -->
+        <header class="identitas-box">
+            <h1>Laporan Praktikum Pemrograman Web</h1>
+            <p><strong>Nama:</strong> Deli Nurlaeli</p>
+            <p><strong>NIM:</strong> 312510061</p>
+            <p><strong>Kelas:</strong> I252A</p>
+        </header>
+
+        <!-- Latihan 1 & 2: Manipulasi Teks & Event Click -->
+        <section class="card">
+            <h2>Latihan 1 & 2: Manipulasi DOM & Event Click</h2>
+            <h3 id="judul">Latihan DOM</h3>
+            <p id="pesan">Belum ada tindakan.</p>
+            <button id="tombolAksi" type="button">Klik Saya</button>
+        </section>
+
+        <!-- Latihan 3: Mengubah Kelas & Gaya CSS -->
+        <section class="card">
+            <h2>Latihan 3: Mengubah Kelas & Gaya CSS</h2>
+            <p id="teksGaya">Paragraf ini akan berubah gayanya saat tombol diklik.</p>
+            <button id="tombolGaya" type="button">Ubah Gaya CSS</button>
+        </section>
+
+        <!-- Latihan 4: Event Input & Penghitung Karakter -->
+        <section class="card">
+            <h2>Latihan 4: Event Input & Penghitung Karakter</h2>
+            <label for="namaInput">Nama:</label>
+            <input type="text" id="namaInput" maxlength="40" placeholder="Ketik sesuatu...">
+            <p>Jumlah karakter: <span id="jumlahKarakter">0</span></p>
+        </section>
+
+        <!-- Latihan 5: Validasi Form Pendaftaran -->
+        <section class="card">
+            <h2>Latihan 5: Validasi Form Pendaftaran</h2>
+            <form id="formPendaftaran" novalidate>
+                <div class="form-group">
+                    <label for="nama">Nama lengkap</label>
+                    <input id="nama" name="nama" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email">
+                </div>
+                <div class="form-group">
+                    <label for="usia">Usia</label>
+                    <input id="usia" name="usia" type="number" min="17" max="100">
+                </div>
+                <button type="submit">Daftar</button>
+            </form>
+            <p id="pesanForm" aria-live="polite"></p>
+        </section>
+
+        <!-- Latihan 6: Daftar Tugas Sederhana (To-do List) -->
+        <section class="card">
+            <h2>Latihan 6: Daftar Tugas Sederhana (To-do List)</h2>
+            <div class="form-group">
+                <label for="inputTugas">Tugas baru</label>
+                <input id="inputTugas" type="text" placeholder="Masukkan tugas...">
+                <button id="tambahTugas" type="button">Tambah</button>
+            </div>
+            <p id="pesanTugas" aria-live="polite"></p>
+            <ul id="daftarTugas"></ul>
+        </section>
+
+        <!-- Mini Project: Form Pendaftaran Workshop -->
+        <section class="card workshop-card">
+            <h2>Mini Project: Pendaftaran Workshop</h2>
+            <form id="formWorkshop" novalidate>
+                <div class="form-group">
+                    <label for="wsNama">Nama Lengkap (Minimal 3 Karakter):</label>
+                    <input type="text" id="wsNama" name="wsNama">
+                </div>
+                <div class="form-group">
+                    <label for="wsEmail">Email:</label>
+                    <input type="email" id="wsEmail" name="wsEmail">
+                </div>
+                <div class="form-group">
+                    <label for="wsSesi">Pilihan Sesi Workshop:</label>
+                    <select id="wsSesi" name="wsSesi">
+                        <option value="">-- Pilih Sesi --</option>
+                        <option value="Sesi 1: Frontend Dasar">Sesi 1: Frontend Dasar</option>
+                        <option value="Sesi 2: JavaScript DOM Lanjutan">Sesi 2: JavaScript DOM Lanjutan</option>
+                        <option value="Sesi 3: Framework Modern">Sesi 3: Framework Modern</option>
+                    </select>
+                </div>
+                <p>Ringkasan Input Sesi: <span id="infoSesi">-</span></p>
+                <div class="btn-group">
+                    <button type="submit">Daftar Workshop</button>
+                    <button type="button" id="btnResetWs" class="btn-secondary">Reset Form</button>
+                </div>
+            </form>
+            <p id="pesanWorkshop" aria-live="polite"></p>
+        </section>
+    </div>
+</body>
+</html>
